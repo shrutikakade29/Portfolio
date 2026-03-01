@@ -1,0 +1,17 @@
+.particle-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -3;
+  pointer-events: none;
+  opacity: 0;
+  animation: bgFadeIn 2s ease-out 0.5s forwards;
+}
+
+@keyframes bgFadeIn {
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,204 @@
+.about {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-8);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.about-intro h2 {
+    font-size: var(--fs-2xl);
+    color: var(--accent);
+    margin-bottom: var(--space-4);
+    letter-spacing: -0.02em;
+}
+
+.about-lead {
+    font-size: var(--fs-xl);
+    color: var(--text-primary);
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.about-lead em {
+    color: var(--accent);
+    font-style: normal;
+    text-shadow: 0 0 10px var(--accent-glow);
+}
+
+.about-philosophy {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    position: relative;
+    padding-left: var(--space-6);
+    border-left: 2px solid rgba(0, 240, 255, 0.2);
+}
+
+.about-philosophy p {
+    font-size: var(--fs-base);
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.about-approach h3 {
+    font-size: var(--fs-lg);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-6);
+    border-bottom: 1px dashed rgba(255,255,255,0.1);
+    padding-bottom: var(--space-3);
+}
+
+.approach-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+}
+
+.approach-card {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-md);
+    padding: var(--space-6);
+    transition: all var(--transition-base);
+}
+
+.approach-card:hover {
+    border-color: rgba(0, 240, 255, 0.3);
+    background: rgba(0, 240, 255, 0.02);
+    transform: translateY(-2px);
+}
+
+.approach-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 240, 255, 0.1);
+    border-radius: var(--radius-sm);
+    color: var(--accent);
+    margin-bottom: var(--space-4);
+}
+
+.approach-card h4 {
+    font-size: var(--fs-sm);
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+    letter-spacing: 0.05em;
+}
+
+.approach-card p {
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Sidebar */
+.about-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    position: sticky;
+    top: calc(var(--nav-height) + var(--space-8));
+    align-self: flex-start;
+}
+
+.border-glow {
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.05);
+}
+
+.terminal-header {
+    font-size: var(--fs-sm);
+    color: var(--accent);
+    margin-bottom: var(--space-6);
+    border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+    padding-bottom: var(--space-2);
+}
+
+.snapshot-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.snapshot-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--fs-sm);
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+    padding-bottom: var(--space-2);
+}
+
+.snapshot-item dt {
+    color: var(--text-muted);
+}
+
+.snapshot-item dd {
+    font-weight: 500;
+    color: #ffd700; /* JSON string color */
+}
+
+.status-online {
+    color: #10b981 !important;
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+.about-quote {
+    padding: var(--space-6);
+    border-left: 2px solid var(--accent);
+    background: linear-gradient(90deg, rgba(0, 240, 255, 0.05) 0%, transparent 100%);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.about-quote blockquote {
+    font-size: var(--fs-lg);
+    font-style: italic;
+    color: var(--text-primary);
+    line-height: 1.6;
+    margin-bottom: var(--space-4);
+}
+
+.about-quote cite {
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
+}
+
+@media (max-width: 1024px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-sidebar {
+        position: relative;
+        top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .approach-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-intro h2 {
+        font-size: var(--fs-xl);
+    }
+    
+    .about-lead {
+        font-size: var(--fs-lg);
+    }
+}
