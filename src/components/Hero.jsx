@@ -91,6 +91,15 @@ function Hero() {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              href="/resume.pdf"
+              download="Shruti_Kakade_CV.pdf"
+              className="btn btn-secondary border-white/10 hover:border-white/20"
+            >
+              GET_RESUME
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               href="#contact"
               className="btn btn-secondary border-white/10 hover:border-white/20"
               onClick={(e) => handleNavClick(e, "contact")}
